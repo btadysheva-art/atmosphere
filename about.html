@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свяжитесь со студией дизайна Atmosphere. Закажите консультацию по вашему проекту.">
+    <title>Контакты | Atmosphere</title>
+    
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <h1 class="logo_title">ATMOSPHERE</h1>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">☰</button>
+            
+            <nav class="menu">
+                <ul id="menuList">
+                    <li class="menu_item"><a href="index.html" class="menu_link">Главная</a></li>
+                    <li class="menu_item"><a href="about.html" class="menu_link">О студии</a></li>
+                    <li class="menu_item"><a href="contact.html" class="menu_link active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="section-padding" style="background: linear-gradient(135deg, var(--dark), var(--primary)); color: var(--light);">
+        <div class="container text-center">
+            <h1 class="page-title" style="color: var(--light); margin: 0; padding-bottom: 0;">Свяжитесь с нами</h1>
+            <p class="lead" style="opacity: 0.95; max-width: 600px; margin: 15px auto 0;">
+                Мы всегда рады обсудить ваш проект и ответить на все вопросы
+            </p>
+        </div>
+    </section>
+    
+    
+    <main class="section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <div class="contact-info animate-fade-in-up">
+                    <h3>Контактная информация</h3>
+                    
+                    <div class="contact-item">
+                        <strong>Адрес студии</strong>
+                        г. Москва, ул. Дизайнерская, 15, офис 302
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Телефон</strong>
+                        <a href="tel:+74951234567" class="text-primary fw-semibold">+7 (495) 123-45-67</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:info@atmosphere-design.ru" class="text-primary fw-semibold">info@atmosphere-design.ru</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <strong>Режим работы</strong>
+                        Пн-Пт: 10:00 - 19:00<br>
+                        Сб: 11:00 - 16:00
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 22px; background: var(--light); border-radius: var(--radius-sm); border-left: 4px solid var(--accent);">
+                        <p style="margin: 0; font-style: italic; font-size: 0.95rem;">
+                            "Мы всегда рады обсудить ваш проект и ответить на все вопросы. Оставьте заявку, и мы свяжемся с вами в течение дня!"
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <section class="form-section animate-fade-in-up delay-1">
+                    <form id="contactForm" novalidate>
+                        <fieldset>
+                            <legend>Заполните форму</legend>
+                            
+                            <div class="text-field">
+                                <label for="name">Ваше имя *</label>
+                                <input class="text-field__input" type="text" name="name" id="name" required placeholder="Иван Иванов" pattern="[\u0400-\u04FF\s]+">
+                            </div>
+                            
+                            <div class="text-field">
+                                <label for="phone">Телефон *</label>
+                                <input class="text-field__input" type="tel" name="phone" id="phone" required placeholder="+7 (___) ___-__-__" pattern="^\+7\s?\(?\d{3}\)?\s?\d{3}-\d{2}-\d{2}$">
+                            </div>
+                            
+                            <div class="text-field">
+                                <label for="email">Email</label>
+                                <input class="text-field__input" type="email" name="email" id="email" placeholder="example@mail.ru">
+                            </div>
+                            
+                            <div class="text-field">
+                                <label for="type">Тип помещения</label>
+                                <select class="text-field__select" name="type" id="type">
+                                    <option value="">Выберите тип</option>
+                                    <option value="apartment">Квартира</option>
+                                    <option value="house">Частный дом</option>
+                                    <option value="office">Офис</option>
+                                    <option value="commercial">Коммерческое помещение</option>
+                                </select>
+                            </div>
+                            
+                            <div class="text-field">
+                                <label for="message">Опишите ваш проект</label>
+                                <textarea class="text-field__textarea" name="message" id="message" placeholder="Расскажите о вашем помещении, пожеланиях по стилю и бюджете..."></textarea>
+                            </div>
+                        </fieldset>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">
+                                <span>📤</span> Отправить заявку
+                            </button>
+                            <button type="reset" class="btn btn-outline">
+                                <span>🔄</span> Очистить форму
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Студия дизайна Atmosphere. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О студии</a>
+                <a href="contact.html">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 500);
+        });
+
+        
+        const menuToggle = document.getElementById('menuToggle');
+        const menuList = document.getElementById('menuList');
+        
+        menuToggle?.addEventListener('click', () => {
+            menuList.classList.toggle('active');
+            menuToggle.textContent = menuList.classList.contains('active') ? '✕' : '☰';
+        });
+
+        
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header')?.classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('scrollTop')?.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        
+        document.getElementById('scrollTop')?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        
+        const form = document.getElementById('contactForm');
+        form?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (form.checkValidity()) {
+                
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '⏳ Отправка...';
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    alert('✅ Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.');
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 1500);
+            } else {
+                form.reportValidity();
+            }
+        });
+
+       
+        document.getElementById('phone')?.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.startsWith('8')) value = '7' + value.slice(1);
+            if (value.startsWith('7')) {
+                value = '+7 (' + value.slice(1);
+                if (value.length > 6) value = value.slice(0, 6) + ') ' + value.slice(6);
+                if (value.length > 11) value = value.slice(0, 11) + '-' + value.slice(11);
+                if (value.length > 14) value = value.slice(0, 14) + '-' + value.slice(14);
+            }
+            e.target.value = value.slice(0, 18);
+        });
+    </script>
+</body>
+</html>
